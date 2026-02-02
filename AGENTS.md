@@ -18,12 +18,22 @@ Open [http://localhost:3000](http://localhost:3000) to see your site.
 
 ## For AI Assistants
 
+### Package Manager
+
+> **⚠️ IMPORTANT: Always use `pnpm` for all package operations.**
+>
+> This project uses **pnpm** exclusively. Do NOT use `npm` or `yarn`.
+>
+> - Install dependencies: `pnpm install`
+> - Add a package: `pnpm add <package>`
+> - Run scripts: `pnpm <script>` (e.g., `pnpm dev`, `pnpm build`)
+
 ### Stack
 
 - **Next.js 16** with App Router
 - **Tailwind CSS 4** for styling
 - **TypeScript** for type safety
-- **pnpm** as package manager
+- **pnpm** as package manager (see above)
 
 ### Code Style
 
@@ -81,7 +91,6 @@ Put images in `public/` folder:
 
 ```tsx
 import Image from 'next/image'
-
 ;<Image src="/photo.jpg" alt="Description" width={800} height={600} />
 ```
 
