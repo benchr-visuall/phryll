@@ -85,3 +85,14 @@ Place images in `public/` and use `next/image`:
 ### Deployment
 
 Push to GitHub, then import in [vercel.com](https://vercel.com). Vercel auto-deploys on every push.
+
+### Email (Resend)
+
+This project uses [Resend](https://resend.com) for sending emails. Skills are installed in `.agents/skills/resend/` with symlinks for compatibility:
+
+- `.claude/skills/resend` → Claude Code
+- `.agent/skills/resend` → Antigravity
+
+**Setup:** Set `RESEND_API_KEY` environment variable (see `.env.example`).
+
+**Usage:** Read `.agents/skills/resend/SKILL.md` for routing to sub-skills (send-email, resend-inbound, agent-email-inbox).
