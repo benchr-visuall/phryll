@@ -1,49 +1,20 @@
-# BenchCMS
+# BenchCMS Template
 
-A starter template for generating static websites with AI assistants.
+A static website generator assisted by AI. This template is optimized for AI-driven development of static websites.
 
-## How It Works
+## Workflow
 
-1. Clone this template
-2. Describe the website you want to an AI assistant (Claude, Gemini, etc.)
-3. The AI follows the conventions in `AGENTS.md` to build your site
-4. Deploy anywhere
+1. **Populate Context**: Place all specifications, branding, and assets into the `resources/` folder. This is the single source of truth.
+2. **Build**: Instruct your AI assistant to generate the website. It will follow the conventions in `AGENTS.md` to implement the website using the provided resources.
 
-## Quick Start
+## Configuration
 
-```bash
-pnpm install
-pnpm dev
-```
+To enable contact forms, rename `.env.example` to `.env.local` and add your `RESEND_API_KEY`.
 
-Your site runs at [http://localhost:3000](http://localhost:3000).
+## Stack
 
-## What's Included
-
-| Technology     | Purpose                         |
-| -------------- | ------------------------------- |
-| Next.js 16     | React framework with App Router |
-| Tailwind CSS 4 | Utility-first styling           |
-| TypeScript     | Type safety                     |
-| Zod            | Form validation                 |
-| Resend         | Transactional emails            |
-| Prettier       | Code formatting                 |
-
-## Email (Optional)
-
-To enable contact forms:
-
-1. Get an API key at [resend.com](https://resend.com)
-2. Copy `.env.example` to `.env.local`
-3. Add your key
-
-## AI Guidelines
-
-The `AGENTS.md` file tells AI assistants how to:
-
-- Structure pages (data layer + presentation layer)
-- Handle forms with Server Actions and Zod
-- Use Tailwind for styling
-- Send emails with Resend
-
-AI assistants read this file automatically and follow its conventions.
+- Next.js 16 (App Router)
+- Tailwind CSS 4
+- TypeScript
+- Zod
+- Resend
