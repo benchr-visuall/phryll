@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BenchCMS
 
-## Getting Started
+A starter template for generating static websites with AI assistants.
 
-First, run the development server:
+## How It Works
+
+1. Clone this template
+2. Describe the website you want to an AI assistant (Claude, Gemini, etc.)
+3. The AI follows the conventions in `AGENTS.md` to build your site
+4. Deploy anywhere
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your site runs at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What's Included
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Technology     | Purpose                         |
+| -------------- | ------------------------------- |
+| Next.js 16     | React framework with App Router |
+| Tailwind CSS 4 | Utility-first styling           |
+| TypeScript     | Type safety                     |
+| Zod            | Form validation                 |
+| Resend         | Transactional emails            |
+| Prettier       | Code formatting                 |
 
-## Learn More
+## Email (Optional)
 
-To learn more about Next.js, take a look at the following resources:
+To enable contact forms:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Get an API key at [resend.com](https://resend.com)
+2. Copy `.env.example` to `.env.local`
+3. Add your key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## AI Guidelines
 
-## Deploy on Vercel
+The `AGENTS.md` file tells AI assistants how to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Structure pages (data layer + presentation layer)
+- Handle forms with Server Actions and Zod
+- Use Tailwind for styling
+- Send emails with Resend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+AI assistants read this file automatically and follow its conventions.
