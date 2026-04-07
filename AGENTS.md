@@ -10,6 +10,7 @@ A minimal Next.js template ready for deployment.
 - **Tailwind CSS 4** for styling
 - **TypeScript** for type safety
 - **Zod** for validation
+- **shadcn/ui** for components
 - **Resend** for email
 
 ### Package Manager
@@ -104,12 +105,15 @@ export default function Page() {
 Use a mobile-first approach — all pages must be fully responsive:
 
 - Start with mobile layout, then enhance for larger screens using `sm:`, `md:`, `lg:` breakpoints
-- Always include a mobile navigation menu with a hamburger toggle button (this requires a small client component for the toggle state — see "Expected exceptions" above)
+- Always include a mobile navigation menu using the **shadcn drawer** component
 - Test layouts at all breakpoints: mobile (default), tablet (`md:`), desktop (`lg:`)
 
 ### Tailwind Styling
 
 Use Tailwind classes directly in JSX. Key patterns: `flex`, `grid`, `p-4`, `m-2`, `gap-4`, `text-xl`, `font-bold`, `bg-*`, `text-*`, `rounded-lg`, `shadow-md`, `hover:*`, `dark:*`.
+
+This project uses **shadcn/ui**. The **drawer** component is already installed; other components can be installed as needed using the CLI:
+`pnpm dlx shadcn@latest add <component-name>`
 
 ### Images
 
@@ -134,17 +138,31 @@ Use Server Actions for form handling:
 - Share the same Zod schema between client and server to avoid duplication
 - Return typed error/success state from server actions
 
+### shadcn/ui
+
+This project uses [shadcn/ui](https://ui.shadcn.com) for accessible, customizable components. The skill is installed in `.agents/skills/shadcn/`:
+
+- `.claude/skills/shadcn` → Claude Code
+
+**Usage:** Read `.agents/skills/shadcn/SKILL.md` for component documentation and usage patterns.
+
 ### Email (Resend)
 
-This project uses [Resend](https://resend.com) for sending emails. Skills are installed in `.agents/skills/resend/` with symlinks for compatibility:
+This project uses [Resend](https://resend.com) for sending emails. The skill is installed in `.agents/skills/resend/`:
 
 - `.claude/skills/resend` → Claude Code
-- `.agent/skills/resend` → Antigravity
-- `.cursor/skills/resend` → Cursor
 
 **Setup:** Set `RESEND_API_KEY` environment variable (see `.env.example`).
 
 **Usage:** Read `.agents/skills/resend/SKILL.md` for routing to sub-skills (send-email, resend-inbound, agent-email-inbox).
+
+### SEO
+
+This project uses a dedicated SEO skill for technical optimization. The skill is installed in `.agents/skills/seo/`:
+
+- `.claude/skills/seo` → Claude Code
+
+**Usage:** Read `.agents/skills/seo/SKILL.md` for implementation details and checklists.
 
 ---
 
