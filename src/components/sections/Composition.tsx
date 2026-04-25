@@ -113,22 +113,24 @@ export function Composition() {
                     <p className="text-xl leading-relaxed font-light text-white opacity-90">
                       {item.description}
                     </p>
+
+                    {item.id === 'bobines' && (
+                      <div className="pt-12 flex justify-center">
+                        <div className="group/img relative aspect-video w-full max-w-xl overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,242,255,0.05)]">
+                          <Image
+                            src="/composition.jpg"
+                            alt="Architecture technique unifiée"
+                            fill
+                            className="object-cover transition-all duration-1000 group-hover/img:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="pt-24">
-            <div className="group/img relative mx-auto aspect-video w-full max-w-xl overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,242,255,0.05)]">
-              <Image
-                src="/composition.jpg"
-                alt="Architecture technique unifiée"
-                fill
-                className="object-cover transition-all duration-1000 group-hover/img:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
           </div>
         </div>
       </div>
