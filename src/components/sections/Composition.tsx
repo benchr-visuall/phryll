@@ -25,8 +25,8 @@ const COMPOSITION_CONTENT = {
       ],
       description:
         'Les bobines sont enroulées selon une forme toroïdale précise afin de créer un vortex. Le tore est une structure énergétique universelle qui suit un mouvement circulaire et auto-entretenu. Il est présent partout dans la nature et représente le fonctionnement de la conscience à travers la géométrie sacrée. Cette forme dynamique, semblable à un beignet, permet à l’énergie de circuler en continu entre l’intérieur et l’extérieur, en se régénérant sans cesse.988',
-      color: 'text-orange-500',
-      markerColor: 'text-orange-500',
+      color: 'text-primary',
+      markerColor: 'text-primary',
     },
     {
       id: 'generateur',
@@ -41,8 +41,8 @@ const COMPOSITION_CONTENT = {
       title: '· Accessoire optionnel :',
       description:
         'Une forme pyramidale disposée au sommet du quartz (52° comme la pyramide de Gizeh).',
-      color: 'text-orange-500',
-      markerColor: 'text-orange-500',
+      color: 'text-primary',
+      markerColor: 'text-primary',
     },
   ],
 } as const
@@ -102,7 +102,7 @@ export function Composition() {
                         {item.subitems.map((sub, i) => (
                           <p
                             key={i}
-                            className="w-fit text-lg font-black tracking-tighter text-orange-500 uppercase md:text-xl"
+                            className="text-primary w-fit text-lg font-black tracking-tighter uppercase md:text-xl"
                           >
                             {sub}
                           </p>
