@@ -24,7 +24,7 @@ const COMPOSITION_CONTENT = {
         'Une bobine en argent ( Champ éthérique / torsionnel )',
       ],
       description:
-        'Les bobines sont enroulées selon une forme toroïdale précise afin de créer un vortex. Le tore est une structure énergétique universelle qui suit un mouvement circulaire et auto-entretenu. Il est présent partout dans la nature et représente le fonctionnement de la conscience à travers la géométrie sacrée. Cette forme dynamique, semblable à un beignet, permet à l’énergie de circuler en continu entre l’intérieur et l’extérieur, en se régénérant sans cesse.988',
+        'Les bobines sont enroulées selon une forme toroïdale précise afin de créer un vortex. Le tore est une structure énergétique universelle qui suit un mouvement circulaire et auto-entretenu. Il est présent partout dans la nature et représente le fonctionnement de la conscience à travers la géométrie sacrée. Cette forme dynamique, semblable à un beignet, permet à l’énergie de circuler en continu entre l’intérieur et l’extérieur, en se régénérant sans cesse.',
       color: 'text-primary',
       markerColor: 'text-primary',
     },
