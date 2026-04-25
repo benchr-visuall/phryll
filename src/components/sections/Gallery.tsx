@@ -8,15 +8,18 @@ const items = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-32 bg-black">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-20 text-white text-center">
-            Galerie <span className="opacity-30">Photos</span>
+    <section id="gallery" className="bg-black py-32">
+      <div className="container mx-auto max-w-6xl px-6">
+        <h2 className="from-primary to-accent animate-gradient bg-300% mb-20 bg-gradient-to-r via-white bg-clip-text text-center text-5xl font-black tracking-tighter text-transparent uppercase md:text-7xl">
+          Nos générateurs
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {items.map((item) => (
-            <div key={item.id} className="relative aspect-square overflow-hidden rounded-[2.5rem] bg-white/5 border border-white/10 group shadow-2xl transition-transform hover:scale-[1.02]">
+            <div
+              key={item.id}
+              className="group relative aspect-square overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 shadow-2xl transition-transform hover:scale-[1.02]"
+            >
               <Image
                 src={item.src}
                 alt="Générateur"
@@ -26,9 +29,11 @@ export function Gallery() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
-          <p className="text-white text-sm font-bold uppercase tracking-[0.5em]">Pour toutes demandes, nous contacter.</p>
+          <p className="text-sm font-bold tracking-[0.5em] text-white uppercase">
+            Pour toutes demandes, nous contacter.
+          </p>
         </div>
       </div>
     </section>

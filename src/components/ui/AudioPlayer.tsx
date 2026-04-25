@@ -15,21 +15,25 @@ export function AudioPlayer() {
       if (audioRef.current) {
         audioRef.current.muted = false
         setIsMuted(false)
-        audioRef.current.play().then(() => {
-          setIsPlaying(true)
-        }).catch((err) => {
-          console.error("Playback failed even after interaction:", err)
-        })
+        audioRef.current
+          .play()
+          .then(() => {
+            setIsPlaying(true)
+          })
+          .catch((err) => {
+            console.error('Playback failed even after interaction:', err)
+          })
       }
     }
 
     window.addEventListener('start-phryll-experience', handleStartExperience)
-    
+
     // Aggressive attempt at muted autoplay if event hasn't happened
     if (audioRef.current) {
       audioRef.current.muted = true
       setIsMuted(true)
-      audioRef.current.play()
+      audioRef.current
+        .play()
         .then(() => setIsPlaying(true))
         .catch(() => {})
     }
@@ -50,29 +54,23 @@ export function AudioPlayer() {
   }
 
   return (
-    <div className="fixed bottom-10 right-10 z-[100]">
-      <audio 
-        ref={audioRef} 
-        src="/anahita.mp3" 
-        loop 
-        autoPlay
-        preload="auto"
-      />
-      
+    <div className="fixed right-10 bottom-10 z-[100]">
+      <audio ref={audioRef} src="/anahita.mp3" loop autoPlay preload="auto" />
+
       <Button
         onClick={toggleMute}
         variant="outline"
         size="icon"
-        className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-xl border-white/10 text-white hover:bg-white/10 hover:border-primary/50 transition-all group overflow-hidden"
+        className="hover:border-primary/50 group h-12 w-12 overflow-hidden rounded-full border-white/10 bg-black/40 text-white backdrop-blur-xl transition-all hover:bg-white/10"
       >
         {isPlaying && !isMuted ? (
           <div className="flex items-center gap-0.5">
-            <span className="w-0.5 h-3 bg-primary animate-[bounce_1s_infinite_0s]" />
-            <span className="w-0.5 h-5 bg-primary animate-[bounce_1s_infinite_0.2s]" />
-            <span className="w-0.5 h-4 bg-primary animate-[bounce_1s_infinite_0.4s]" />
+            <span className="bg-primary h-3 w-0.5 animate-[bounce_1s_infinite_0s]" />
+            <span className="bg-primary h-5 w-0.5 animate-[bounce_1s_infinite_0.2s]" />
+            <span className="bg-primary h-4 w-0.5 animate-[bounce_1s_infinite_0.4s]" />
           </div>
         ) : (
-          <VolumeX className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity" />
+          <VolumeX className="h-5 w-5 opacity-40 transition-opacity group-hover:opacity-100" />
         )}
       </Button>
     </div>

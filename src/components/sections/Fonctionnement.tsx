@@ -3,50 +3,75 @@ export function Fonctionnement() {
     {
       num: '01',
       title: 'Stimulation électrique',
-      text: 'Le générateur d’impulsions envoie des pulsations alternées dans les deux bobines, créant un champ de torsion à l’intérieur du quartz.',
-      accent: 'bg-primary'
+      text: 'Le générateur d’impulsions envoie des pulsations alternées dans les deux bobines. Cela crée un champ de torsion (champ scalaire ou ondes scalaires) à l’intérieur de la structure cristalline du quartz.',
+      accent: 'bg-primary',
+      textColor: 'text-primary',
     },
     {
       num: '02',
       title: 'Activation du réseau cristallin',
-      text: 'La fréquence de 4096 Hz résonne avec la géométrie du réseau de quartz, libérant ou concentrent le Phryll.',
-      accent: 'bg-white'
+      text: 'La fréquence de 4096 Hz résonne avec la géométrie du réseau de quartz. Combinée au champ de torsion, elle « active » le cristal et provoque un phénomène de résonance qui libère ou concentre le Phryll.',
+      accent: 'bg-white',
+      textColor: 'text-white',
     },
     {
       num: '03',
       title: 'Émission du Phryll',
-      text: 'L’énergie est émise par la pointe la plus fine du cristal, produisant un rayonnement bénéfique pour la vitalité.',
-      accent: 'bg-accent'
+      text: 'L’énergie Phryll est émise principalement par la pointe supérieure du cristal (la pointe la plus fine). Cela produit un rayonnement bénéfique qui peut :\n\n· Améliorer le bien-être, la vitalité et la récupération énergétique (usage « thérapeutique » ou de santé).\n· Dans des configurations plus poussées, être utilisé comme source d’énergie libre.',
+      accent: 'bg-accent',
+      textColor: 'text-accent',
     },
   ]
 
   return (
-    <section id="fonctionnement" className="py-32 bg-[#0d0a0d] relative overflow-hidden border-b border-white/5">
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-24 text-white text-center">
-            Comment ça <span className="text-accent underline decoration-accent/20 underline-offset-[1rem]">fonctionne</span>
+    <section
+      id="fonctionnement"
+      className="relative overflow-hidden border-b border-white/5 bg-[#0d0a0d] py-32"
+    >
+      <div className="relative z-10 container mx-auto max-w-6xl px-6 text-center">
+        <h2 className="from-primary to-accent animate-gradient bg-300% mb-24 bg-gradient-to-r via-white bg-clip-text text-center text-5xl font-black tracking-tighter text-transparent uppercase md:text-7xl">
+          Comment ça fonctionne
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {steps.map((step) => (
-            <div key={step.num} className="group relative p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-white/20 transition-all">
-              <div className="absolute top-0 right-12 -translate-y-1/2 text-8xl font-black text-white/[0.03] group-hover:text-white/[0.08] transition-colors">{step.num}</div>
-              
-              <div className={`w-12 h-12 rounded-2xl ${step.accent} mb-8 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.1)]`}>
-                <div className="w-1.5 h-1.5 rounded-full bg-black animate-ping" />
-              </div>
+        <div className="mx-auto flex max-w-4xl flex-col gap-16">
+          {steps.map((step, index) => (
+            <div key={step.num} className="relative">
+              {/* Connector Line */}
+              {index !== steps.length - 1 && (
+                <div className="from-primary/30 absolute top-full left-1/2 z-0 h-16 w-px -translate-x-1/2 bg-gradient-to-b to-transparent" />
+              )}
 
-              <h3 className="text-2xl font-black text-white mb-6 leading-tight uppercase tracking-tight">{step.title}</h3>
-              <p className="text-white text-lg leading-relaxed font-light">
-                {step.text}
-              </p>
+              <div className="group relative z-10 flex min-h-[250px] items-center overflow-hidden rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-12 transition-all hover:border-white/20">
+                <div className="pointer-events-none absolute top-5 right-12 text-9xl font-black text-white/[0.02] transition-colors group-hover:text-white/[0.05]">
+                  {step.num}
+                </div>
+
+                <div className="relative z-10 flex w-full flex-col gap-10 md:flex-row md:items-center">
+                  <div
+                    className={`h-16 w-16 shrink-0 rounded-2xl ${step.accent} flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)]`}
+                  >
+                    <div className="h-2 w-2 animate-ping rounded-full bg-black" />
+                  </div>
+
+                  <div className="space-y-4 text-left">
+                    <h3
+                      className={`text-3xl font-black ${step.textColor} leading-tight tracking-tight uppercase`}
+                    >
+                      {step.title}
+                    </h3>
+                    <p className="max-w-3xl text-xl leading-relaxed font-light whitespace-pre-line text-white opacity-90">
+                      {step.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-      
+
       {/* Background large text accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-black text-white/[0.01] pointer-events-none select-none uppercase tracking-tighter">
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-black tracking-tighter text-white/[0.01] uppercase select-none">
         Vortex
       </div>
     </section>

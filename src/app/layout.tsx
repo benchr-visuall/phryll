@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased selection:bg-primary selection:text-primary-foreground`}>
+      <body
+        className={`${inter.variable} selection:bg-primary selection:text-primary-foreground font-sans antialiased`}
+      >
         <Loader />
         {children}
         <AudioPlayer />
