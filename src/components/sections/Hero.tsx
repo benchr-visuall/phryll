@@ -34,7 +34,7 @@ export function Hero() {
 
       <div className="relative z-10 container mx-auto max-w-5xl">
         <div className="space-y-10">
-          <h1 className="text-6xl leading-[0.9] font-black tracking-tighter text-white md:text-9xl">
+          <h1 className="text-5xl leading-[0.9] font-black tracking-tighter text-white sm:text-6xl md:text-9xl">
             {HERO_CONTENT.title.main} <br />
             <span className="from-primary to-accent animate-gradient bg-300% bg-gradient-to-r via-white bg-clip-text text-transparent">
               {HERO_CONTENT.title.highlight}

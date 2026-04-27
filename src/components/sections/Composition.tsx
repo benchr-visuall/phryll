@@ -10,9 +10,9 @@ const COMPOSITION_CONTENT = {
       id: 'quartz',
       title: '· Un cristal de quartz biterminé :',
       subtitle:
-        "(De préférence Vogel pour un meilleur résultat mais n'importe quel biterminé fonctionne )",
+        "(De préférence Vogel pour un meilleur résultat mais n'importe quel biterminé fonctionne).",
       description:
-        'Le cristal Vogel est un cristal de quartz taillé selon une géométrie précise (généralement de 6 à 24 faces, avec des angles spécifiques alignés on l’axe du quartz et la structure hexagonale). La taille courante du Vogel va de 10 à 15 cm environ. Ce cristal agit comme un amplificateur et focaliseur d’énergie grâce à sa structure cristalline.',
+        'Le cristal Vogel est un cristal de quartz taillé selon une géométrie précise (généralement de 6 à 24 faces, avec des angles spécifiques alignés sur l’axe du quartz et la structure hexagonale). La taille courante du Vogel va de 10 à 15 cm environ. Ce cristal agit comme un amplificateur et focaliseur d’énergie grâce à sa structure cristalline.',
       color: 'text-accent',
       markerColor: 'text-accent',
     },
@@ -32,7 +32,7 @@ const COMPOSITION_CONTENT = {
       id: 'generateur',
       title: '· Un générateur d’impulsions électriques :',
       description:
-        'Il envoie des font signaux pulsés alternés à une fréquence précise de 4096 Hz, avec un faible duty cycle de 7%. La tension envoyée se situe à 30 V. Les deux bobines sont alimentées en opposition de phase (180°)',
+        'Il envoie des signaux pulsés alternés à une fréquence précise de 4096 Hz, avec un faible duty cycle de 7%. La tension envoyée se situe à 30 V. Les deux bobines sont alimentées en opposition de phase (180°)',
       color: 'text-accent',
       markerColor: 'text-accent',
     },

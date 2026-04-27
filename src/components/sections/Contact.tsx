@@ -22,11 +22,11 @@ export function Contact() {
           <div className="bg-primary/20 absolute -inset-4 rounded-full opacity-0 blur-3xl transition-opacity group-hover:opacity-100" />
           <a
             href="mailto:genphryll@gmail.com"
-            className="hover:text-primary relative inline-flex items-center gap-6 text-3xl font-black tracking-tighter text-white transition-all duration-500 md:text-6xl"
+            className="hover:text-primary relative inline-flex flex-wrap items-center justify-center gap-4 text-xl font-black tracking-tighter text-white transition-all duration-500 sm:gap-6 sm:text-3xl md:text-6xl"
           >
-            <Mail className="text-primary h-10 w-10 md:h-16 md:w-16" />
-            genphryll@gmail.com
-            <ArrowRight className="h-8 w-8 translate-x-[-20px] opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100 md:h-12 md:w-12" />
+            <Mail className="text-primary h-8 w-8 sm:h-10 sm:w-10 md:h-16 md:w-16" />
+            <span className="break-all">genphryll@gmail.com</span>
+            <ArrowRight className="hidden h-8 w-8 translate-x-[-20px] opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100 sm:inline-block md:h-12 md:w-12" />
           </a>
         </div>
 

@@ -17,7 +17,7 @@ import {
 const navItems = [
   { label: 'Composition', href: '#composition' },
   { label: 'Fonctionnement', href: '#fonctionnement' },
-  { label: 'Galerie', href: '#gallery' },
+  { label: 'Nos générateurs', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -59,7 +59,7 @@ export function Navbar() {
               Phryll
             </span>
             <span className="text-primary mt-1 text-[8px] leading-none font-bold tracking-[0.4em] uppercase">
-              Technologies
+              Technologie
             </span>
           </div>
         </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
                   <DrawerClose key={item.label} asChild>
                     <Link
                       href={item.href}
-                      className="hover:text-primary text-5xl font-black tracking-tighter text-white transition-all active:scale-95"
+                      className="hover:text-primary text-3xl font-black tracking-tighter text-white transition-all active:scale-95 md:text-5xl"
                     >
                       {item.label}
                     </Link>

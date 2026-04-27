@@ -7,7 +7,7 @@ import { Contact } from '@/components/sections/Contact'
 import { SectionSeparator } from '@/components/ui/section-separator'
 
 // DATA LAYER - All content for SEO and easy updates
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://phryll.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://phrylltechnologie.vercel.app'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

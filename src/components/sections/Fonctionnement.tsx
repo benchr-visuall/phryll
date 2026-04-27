@@ -1,3 +1,5 @@
+import { Atom } from 'lucide-react'
+
 export function Fonctionnement() {
   const steps = [
     {
@@ -48,9 +50,9 @@ export function Fonctionnement() {
 
                 <div className="relative z-10 flex w-full flex-col gap-10 md:flex-row md:items-center">
                   <div
-                    className={`h-16 w-16 shrink-0 rounded-2xl ${step.accent} flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)]`}
+                    className={`h-16 w-16 shrink-0 rounded-2xl ${step.accent} flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-transform duration-500 group-hover:scale-110`}
                   >
-                    <div className="h-2 w-2 animate-ping rounded-full bg-black" />
+                    <Atom size={28} className="animate-pulse text-black" />
                   </div>
 
                   <div className="space-y-4 text-left">

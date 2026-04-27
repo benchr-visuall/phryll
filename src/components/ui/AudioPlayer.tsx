@@ -27,6 +27,20 @@ export function AudioPlayer() {
     }
 
     window.addEventListener('start-phryll-experience', handleStartExperience)
+    
+    // Stop audio when page is hidden (phone screen off or tab switch)
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (isPlaying && !isMuted) {
+          audioRef.current?.pause()
+        }
+      } else {
+        if (isPlaying && !isMuted) {
+          audioRef.current?.play().catch(() => {})
+        }
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
 
     // Aggressive attempt at muted autoplay if event hasn't happened
     if (audioRef.current) {
@@ -40,8 +54,9 @@ export function AudioPlayer() {
 
     return () => {
       window.removeEventListener('start-phryll-experience', handleStartExperience)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
-  }, [])
+  }, [isPlaying, isMuted])
 
   const toggleMute = () => {
     if (!audioRef.current) return
